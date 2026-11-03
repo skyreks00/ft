@@ -22,8 +22,8 @@ import (
 
 // Compile-time defaults, set with:
 //
-//	-ldflags "-X github.com/swilmus/ft/internal/config.DefaultClientID=... \
-//	          -X github.com/swilmus/ft/internal/config.DefaultBrokerURL=..."
+//	-ldflags "-X github.com/skyreks00/ft/internal/config.DefaultClientID=... \
+//	          -X github.com/skyreks00/ft/internal/config.DefaultBrokerURL=..."
 var (
 	DefaultClientID  = ""
 	DefaultBrokerURL = ""

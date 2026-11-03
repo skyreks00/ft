@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/swilmus/ft/internal/fuzzy"
+	"github.com/skyreks00/ft/internal/fuzzy"
 )
 
 // Project definitions rarely change; per-user progress does.

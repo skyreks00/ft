@@ -4,8 +4,8 @@ import (
 	"context"
 	"os"
 
-	"github.com/swilmus/ft/internal/api"
-	"github.com/swilmus/ft/internal/config"
+	"github.com/skyreks00/ft/internal/api"
+	"github.com/skyreks00/ft/internal/config"
 )
 
 // linkedProject returns the project named by args[0], or the one linked to

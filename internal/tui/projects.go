@@ -10,9 +10,9 @@ import (
 
 	tea "github.com/charmbracelet/bubbletea"
 
-	"github.com/swilmus/ft/internal/api"
-	"github.com/swilmus/ft/internal/config"
-	"github.com/swilmus/ft/internal/fuzzy"
+	"github.com/skyreks00/ft/internal/api"
+	"github.com/skyreks00/ft/internal/config"
+	"github.com/skyreks00/ft/internal/fuzzy"
 )
 
 // The projects panel groups projects by cursus. When ft has the holy graph

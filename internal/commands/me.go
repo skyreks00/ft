@@ -6,9 +6,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/swilmus/ft/internal/format"
+	"github.com/skyreks00/ft/internal/format"
 
-	"github.com/swilmus/ft/internal/api"
+	"github.com/skyreks00/ft/internal/api"
 )
 
 func newMeCmd(a *app) *cobra.Command {

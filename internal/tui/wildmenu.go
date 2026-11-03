@@ -8,8 +8,8 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/x/ansi"
 
-	"github.com/swilmus/ft/internal/format"
-	"github.com/swilmus/ft/internal/fuzzy"
+	"github.com/skyreks00/ft/internal/format"
+	"github.com/skyreks00/ft/internal/fuzzy"
 )
 
 // The command palette suggests completions in a bar above the command line

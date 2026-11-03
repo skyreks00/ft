@@ -1,4 +1,4 @@
-module github.com/swilmus/ft
+module github.com/skyreks00/ft
 
 go 1.27.0
 

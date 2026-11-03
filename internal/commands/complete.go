@@ -13,11 +13,11 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 
-	"github.com/swilmus/ft/internal/api"
-	"github.com/swilmus/ft/internal/config"
-	"github.com/swilmus/ft/internal/format"
-	"github.com/swilmus/ft/internal/fuzzy"
-	"github.com/swilmus/ft/internal/slots42"
+	"github.com/skyreks00/ft/internal/api"
+	"github.com/skyreks00/ft/internal/config"
+	"github.com/skyreks00/ft/internal/format"
+	"github.com/skyreks00/ft/internal/fuzzy"
+	"github.com/skyreks00/ft/internal/slots42"
 )
 
 // Shell completion. Cobra does not run PersistentPreRunE for completion

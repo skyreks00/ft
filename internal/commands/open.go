@@ -6,10 +6,10 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/swilmus/ft/internal/format"
+	"github.com/skyreks00/ft/internal/format"
 
-	"github.com/swilmus/ft/internal/api"
-	"github.com/swilmus/ft/internal/browser"
+	"github.com/skyreks00/ft/internal/api"
+	"github.com/skyreks00/ft/internal/browser"
 )
 
 func newOpenCmd(a *app) *cobra.Command {

@@ -17,7 +17,7 @@ import (
 
 	"golang.org/x/oauth2"
 
-	"github.com/swilmus/ft/internal/browser"
+	"github.com/skyreks00/ft/internal/browser"
 )
 
 // LoginOptions configures the browser login flow.

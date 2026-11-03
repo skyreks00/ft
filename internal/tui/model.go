@@ -12,10 +12,10 @@ import (
 	"github.com/charmbracelet/bubbles/textinput"
 	tea "github.com/charmbracelet/bubbletea"
 
-	"github.com/swilmus/ft/internal/api"
-	"github.com/swilmus/ft/internal/browser"
-	"github.com/swilmus/ft/internal/config"
-	"github.com/swilmus/ft/internal/slots42"
+	"github.com/skyreks00/ft/internal/api"
+	"github.com/skyreks00/ft/internal/browser"
+	"github.com/skyreks00/ft/internal/config"
+	"github.com/skyreks00/ft/internal/slots42"
 )
 
 // Options configures the TUI.

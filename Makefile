@@ -7,7 +7,7 @@ BROKER_URL ?= $(FT_BROKER_URL)
 VERSION    ?= $(shell git describe --tags --always --dirty 2>/dev/null || echo dev)
 BINDIR     ?= $(HOME)/.local/bin
 
-CONFIG_PKG := github.com/swilmus/ft/internal/config
+CONFIG_PKG := github.com/skyreks00/ft/internal/config
 LDFLAGS := -s -w \
 	-X $(CONFIG_PKG).Version=$(VERSION) \
 	-X $(CONFIG_PKG).DefaultClientID=$(CLIENT_ID) \

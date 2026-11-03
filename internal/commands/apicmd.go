@@ -11,7 +11,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/swilmus/ft/internal/api"
+	"github.com/skyreks00/ft/internal/api"
 )
 
 // newAPICmd is a raw request escape hatch, used to probe which endpoints the

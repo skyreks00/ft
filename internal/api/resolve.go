@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/swilmus/ft/internal/fuzzy"
+	"github.com/skyreks00/ft/internal/fuzzy"
 )
 
 // DefaultCursusID is 42cursus, used to search projects when the user has no

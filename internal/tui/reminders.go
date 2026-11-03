@@ -7,8 +7,8 @@ import (
 
 	tea "github.com/charmbracelet/bubbletea"
 
-	"github.com/swilmus/ft/internal/api"
-	"github.com/swilmus/ft/internal/notify"
+	"github.com/skyreks00/ft/internal/api"
+	"github.com/skyreks00/ft/internal/notify"
 )
 
 // Reminders: while the TUI runs, evaluations (given or received) and the

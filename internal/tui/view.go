@@ -8,9 +8,9 @@ import (
 	"github.com/charmbracelet/lipgloss"
 	"github.com/charmbracelet/x/ansi"
 
-	"github.com/swilmus/ft/internal/api"
-	"github.com/swilmus/ft/internal/format"
-	"github.com/swilmus/ft/internal/fuzzy"
+	"github.com/skyreks00/ft/internal/api"
+	"github.com/skyreks00/ft/internal/format"
+	"github.com/skyreks00/ft/internal/fuzzy"
 )
 
 const (

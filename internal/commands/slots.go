@@ -14,9 +14,9 @@ import (
 	"github.com/spf13/cobra"
 	"golang.org/x/term"
 
-	"github.com/swilmus/ft/internal/api"
-	"github.com/swilmus/ft/internal/format"
-	"github.com/swilmus/ft/internal/slots42"
+	"github.com/skyreks00/ft/internal/api"
+	"github.com/skyreks00/ft/internal/format"
+	"github.com/skyreks00/ft/internal/slots42"
 )
 
 func newSlotsCmd(a *app) *cobra.Command {

@@ -17,11 +17,11 @@ import (
 	"golang.org/x/oauth2"
 	"golang.org/x/term"
 
-	"github.com/swilmus/ft/internal/api"
-	"github.com/swilmus/ft/internal/auth"
-	"github.com/swilmus/ft/internal/config"
-	"github.com/swilmus/ft/internal/slots42"
-	"github.com/swilmus/ft/internal/tui"
+	"github.com/skyreks00/ft/internal/api"
+	"github.com/skyreks00/ft/internal/auth"
+	"github.com/skyreks00/ft/internal/config"
+	"github.com/skyreks00/ft/internal/slots42"
+	"github.com/skyreks00/ft/internal/tui"
 )
 
 type globalFlags struct {

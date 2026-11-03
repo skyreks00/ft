@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/swilmus/ft/internal/api"
+	"github.com/skyreks00/ft/internal/api"
 )
 
 func TestAliases(t *testing.T) {

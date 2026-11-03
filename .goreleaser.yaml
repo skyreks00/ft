@@ -19,9 +19,9 @@ builds:
       - -trimpath
     ldflags:
       - -s -w
-      - -X github.com/swilmus/ft/internal/config.Version={{ .Version }}
-      - -X github.com/swilmus/ft/internal/config.DefaultClientID={{ .Env.FT_CLIENT_ID }}
-      - -X github.com/swilmus/ft/internal/config.DefaultBrokerURL={{ .Env.FT_BROKER_URL }}
+      - -X github.com/skyreks00/ft/internal/config.Version={{ .Version }}
+      - -X github.com/skyreks00/ft/internal/config.DefaultClientID={{ .Env.FT_CLIENT_ID }}
+      - -X github.com/skyreks00/ft/internal/config.DefaultBrokerURL={{ .Env.FT_BROKER_URL }}
 
 archives:
   - formats: [tar.gz]

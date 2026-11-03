@@ -9,7 +9,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/swilmus/ft/internal/api"
+	"github.com/skyreks00/ft/internal/api"
 )
 
 // eventRow is an event with the user's subscription, for `--json`.

@@ -9,11 +9,11 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/swilmus/ft/internal/api"
-	"github.com/swilmus/ft/internal/config"
-	"github.com/swilmus/ft/internal/format"
-	"github.com/swilmus/ft/internal/fuzzy"
-	"github.com/swilmus/ft/internal/gitx"
+	"github.com/skyreks00/ft/internal/api"
+	"github.com/skyreks00/ft/internal/config"
+	"github.com/skyreks00/ft/internal/format"
+	"github.com/skyreks00/ft/internal/fuzzy"
+	"github.com/skyreks00/ft/internal/gitx"
 )
 
 func newLinkCmd(a *app) *cobra.Command {

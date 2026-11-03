@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/swilmus/ft/internal/gitx"
+	"github.com/skyreks00/ft/internal/gitx"
 )
 
 // gitEnv isolates git from the user's configuration.

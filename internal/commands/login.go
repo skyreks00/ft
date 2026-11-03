@@ -5,9 +5,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/swilmus/ft/internal/auth"
-	"github.com/swilmus/ft/internal/config"
-	"github.com/swilmus/ft/internal/slots42"
+	"github.com/skyreks00/ft/internal/auth"
+	"github.com/skyreks00/ft/internal/config"
+	"github.com/skyreks00/ft/internal/slots42"
 )
 
 func newLoginCmd(a *app) *cobra.Command {

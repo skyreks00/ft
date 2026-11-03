@@ -10,8 +10,8 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/x/ansi"
 
-	"github.com/swilmus/ft/internal/api"
-	"github.com/swilmus/ft/internal/config"
+	"github.com/skyreks00/ft/internal/api"
+	"github.com/skyreks00/ft/internal/config"
 )
 
 const meJSON = `{"id":1,"login":"swilmus",
