@@ -1,0 +1,18 @@
+# Secrets and local config — never commit
+.env
+.dev.vars
+broker/.dev.vars
+*.token
+
+# Per-folder / per-user ft data
+.ft.toml
+friends.json
+
+# Build output (anchored: a bare `ft` would also ignore cmd/ft/)
+/ft
+/dist/
+
+# Broker
+node_modules/
+broker/.wrangler/
+broker/worker-configuration.d.ts

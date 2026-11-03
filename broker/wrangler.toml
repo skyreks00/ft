@@ -1,0 +1,19 @@
+name = "ft-broker"
+main = "src/index.ts"
+compatibility_date = "2025-10-01"
+
+# Never ship request bodies or logs anywhere: the broker handles codes and tokens.
+[observability]
+enabled = false
+
+[vars]
+# Public 42 app UID. The secret is NOT here: it is `wrangler secret put
+# FT_CLIENT_SECRET` in production and broker/.dev.vars for `wrangler dev`.
+FT_CLIENT_ID = "u-s4t2ud-8a4d99759bfebc7c2a38249e690081ef9b4ad0131eda3116efc22d48f6d1efad"
+ALLOWED_REDIRECT_URIS = "http://localhost:8080/callback,http://localhost:8081/callback,http://localhost:8082/callback"
+
+# Per-IP abuse protection (Workers rate limiting binding, free tier).
+[[ratelimits]]
+name = "LIMITER"
+namespace_id = "4242"
+simple = { limit = 20, period = 60 }

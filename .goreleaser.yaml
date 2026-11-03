@@ -1,0 +1,37 @@
+# Release builds: scripts/release.sh vX.Y.Z (needs FT_CLIENT_ID and
+# FT_BROKER_URL, public values, from .env; and a GitHub token).
+version: 2
+project_name: ft
+
+before:
+  hooks:
+    - go mod tidy
+    - go test ./...
+
+builds:
+  - main: ./cmd/ft
+    binary: ft
+    env:
+      - CGO_ENABLED=0
+    goos: [linux, darwin]
+    goarch: [amd64, arm64]
+    flags:
+      - -trimpath
+    ldflags:
+      - -s -w
+      - -X github.com/swilmus/ft/internal/config.Version={{ .Version }}
+      - -X github.com/swilmus/ft/internal/config.DefaultClientID={{ .Env.FT_CLIENT_ID }}
+      - -X github.com/swilmus/ft/internal/config.DefaultBrokerURL={{ .Env.FT_BROKER_URL }}
+
+archives:
+  - formats: [tar.gz]
+    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    files:
+      - LICENSE
+      - README.md
+
+checksum:
+  name_template: checksums.txt
+
+changelog:
+  sort: asc

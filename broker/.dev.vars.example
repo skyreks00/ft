@@ -1,0 +1,3 @@
+# Copy to .dev.vars (gitignored) for `wrangler dev`. Never commit the real file.
+FT_CLIENT_ID=your-42-app-uid
+FT_CLIENT_SECRET=your-42-app-secret
