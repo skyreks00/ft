@@ -1,7 +1,34 @@
 # ft
 
-A fast terminal client for the 42 intra. Work in progress. Full install and
-release docs will come later.
+A fast terminal client for the 42 intra: your projects by holy graph circle,
+clone and push to vogsphere (with a norminette check), evaluations and their
+comments, slots, events, logtime, from the command line or a vim-style
+full-screen interface.
+
+## Install
+
+Download the archive for your system from the
+[releases](https://github.com/skyreks00/ft/releases) (Linux or macOS, amd64 or
+arm64), then:
+
+```sh
+tar -xzf ft_*_linux_amd64.tar.gz ft
+mkdir -p ~/.local/bin && mv ft ~/.local/bin/   # a folder in your $PATH
+ft login                                       # opens the 42 login page
+ft                                             # the full-screen interface
+```
+
+`ft login` asks for three permissions on your 42 account: public data,
+projects (teams, slots), and user data (only used to join and leave events).
+Your token stays in `~/.config/ft/` on your machine.
+
+To clone and push, your SSH key must be on your intra profile (Settings →
+SSH keys); check with `ssh -T git@vogsphere-v2.42belgium.be` (use your
+campus' vogsphere host).
+
+At 42 Belgium, slots and evaluation bookings live on slots.42belgium.be: run
+`ft slots auth` once (it asks for that site's `sessionid` cookie, from your
+browser's developer tools) to manage them from ft.
 
 ## How auth works
 
