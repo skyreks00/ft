@@ -20,13 +20,17 @@ import (
 	"github.com/joho/godotenv"
 )
 
-// Compile-time defaults, set with:
+// Defaults: the public UID of ft's 42 app and the URL of its token broker
+// (the app secret lives only in the broker). Builds for another 42 app can
+// override them with
 //
 //	-ldflags "-X github.com/skyreks00/ft/internal/config.DefaultClientID=... \
 //	          -X github.com/skyreks00/ft/internal/config.DefaultBrokerURL=..."
+//
+// or at run time with FT_CLIENT_ID and FT_BROKER_URL.
 var (
-	DefaultClientID  = ""
-	DefaultBrokerURL = ""
+	DefaultClientID  = "u-s4t2ud-8a4d99759bfebc7c2a38249e690081ef9b4ad0131eda3116efc22d48f6d1efad"
+	DefaultBrokerURL = "https://ft-broker.eggfarm-app.workers.dev"
 	Version          = "dev"
 )
 

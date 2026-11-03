@@ -11,6 +11,8 @@ Download the archive for your system from the
 [releases](https://github.com/skyreks00/ft/releases) (Linux or macOS, amd64 or
 arm64), then:
 
+Or, with Go: `go install github.com/skyreks00/ft/cmd/ft@latest`.
+
 ```sh
 tar -xzf ft_*_linux_amd64.tar.gz ft
 mkdir -p ~/.local/bin && mv ft ~/.local/bin/   # a folder in your $PATH
@@ -108,8 +110,8 @@ ft completion fish > ~/.config/fish/completions/ft.fish
 
 Then open a new shell (if nothing completes with zsh: `rm -f ~/.zcompdump* && exec zsh`).
 
-Config precedence: environment > `./.env` > `~/.config/ft/.env` > values baked
-in with `make build CLIENT_ID=... BROKER_URL=...`.
+Config precedence: environment > `./.env` > `~/.config/ft/.env` > build-time
+`-ldflags` > the defaults in `internal/config`.
 
 `make test` runs the Go tests and the broker tests (`node --test`), then
 type-checks the broker.
@@ -128,8 +130,10 @@ curl -X POST -H 'Content-Type: application/json' \
   -d '{"refresh_token":"x"}' https://<worker>/refresh # expect invalid_grant
 ```
 
-Then build ft with its URL: `make install BROKER_URL=https://<worker>` (or set
-`FT_BROKER_URL` in `.env`).
+ft's app UID and broker URL are the defaults in `internal/config/config.go`;
+change them there for another deployment (or override them at build time with
+`make install CLIENT_ID=... BROKER_URL=...`, at run time with `FT_CLIENT_ID` /
+`FT_BROKER_URL`).
 
 **The 42 app secret expires** (see `secret_valid_until` on the app page):
 before that, generate a new one on the intra and run `wrangler secret put

@@ -1,6 +1,6 @@
-# Defaults baked into the binary (public values only). They fall back to
-# FT_CLIENT_ID / FT_BROKER_URL from the environment or ./.env, e.g.
-# `make build CLIENT_ID=... BROKER_URL=...`.
+# Optional overrides of the app UID and broker URL (internal/config has
+# ft's own): `make build CLIENT_ID=... BROKER_URL=...`, or FT_CLIENT_ID /
+# FT_BROKER_URL in the environment or ./.env.
 -include .env
 CLIENT_ID  ?= $(FT_CLIENT_ID)
 BROKER_URL ?= $(FT_BROKER_URL)
@@ -8,10 +8,14 @@ VERSION    ?= $(shell git describe --tags --always --dirty 2>/dev/null || echo d
 BINDIR     ?= $(HOME)/.local/bin
 
 CONFIG_PKG := github.com/skyreks00/ft/internal/config
-LDFLAGS := -s -w \
-	-X $(CONFIG_PKG).Version=$(VERSION) \
-	-X $(CONFIG_PKG).DefaultClientID=$(CLIENT_ID) \
-	-X $(CONFIG_PKG).DefaultBrokerURL=$(BROKER_URL)
+LDFLAGS := -s -w -X $(CONFIG_PKG).Version=$(VERSION)
+# Only override the defaults in internal/config when given.
+ifneq ($(CLIENT_ID),)
+LDFLAGS += -X $(CONFIG_PKG).DefaultClientID=$(CLIENT_ID)
+endif
+ifneq ($(BROKER_URL),)
+LDFLAGS += -X $(CONFIG_PKG).DefaultBrokerURL=$(BROKER_URL)
+endif
 
 .PHONY: build install test vet broker-install broker-dev broker-test broker-deploy snapshot clean
 
@@ -42,7 +46,7 @@ broker-deploy:
 
 # Local release build (no tag, no upload), into dist/.
 snapshot:
-	FT_CLIENT_ID=$(CLIENT_ID) FT_BROKER_URL=$(BROKER_URL) goreleaser release --snapshot --clean
+	goreleaser release --snapshot --clean
 
 clean:
 	rm -rf ft dist

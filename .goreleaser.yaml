@@ -1,5 +1,5 @@
-# Release builds: scripts/release.sh vX.Y.Z (needs FT_CLIENT_ID and
-# FT_BROKER_URL, public values, from .env; and a GitHub token).
+# Release builds: scripts/release.sh vX.Y.Z (needs a GitHub token). The app
+# UID and broker URL are the defaults in internal/config.
 version: 2
 project_name: ft
 
@@ -20,8 +20,6 @@ builds:
     ldflags:
       - -s -w
       - -X github.com/skyreks00/ft/internal/config.Version={{ .Version }}
-      - -X github.com/skyreks00/ft/internal/config.DefaultClientID={{ .Env.FT_CLIENT_ID }}
-      - -X github.com/skyreks00/ft/internal/config.DefaultBrokerURL={{ .Env.FT_BROKER_URL }}
 
 archives:
   - formats: [tar.gz]

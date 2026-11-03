@@ -3,6 +3,7 @@ package config
 import (
 	"os"
 	"path/filepath"
+	"strings"
 	"testing"
 	"time"
 )
@@ -113,5 +114,14 @@ func TestParseRemind(t *testing.T) {
 		if got := parseRemind(in); got != want {
 			t.Errorf("parseRemind(%q) = %v, want %v", in, got, want)
 		}
+	}
+}
+
+func TestShippedDefaults(t *testing.T) {
+	if !strings.HasPrefix(DefaultClientID, "u-s4t2ud-") {
+		t.Errorf("DefaultClientID = %q, want ft's public app UID", DefaultClientID)
+	}
+	if !strings.HasPrefix(DefaultBrokerURL, "https://") {
+		t.Errorf("DefaultBrokerURL = %q, want an https URL", DefaultBrokerURL)
 	}
 }
