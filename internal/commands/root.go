@@ -45,7 +45,7 @@ func NewRoot() *cobra.Command {
 	root := &cobra.Command{
 		Use:           "ft",
 		Short:         "A fast terminal client for the 42 intra",
-		Version:       config.Version,
+		Version:       config.BuildVersion(),
 		SilenceUsage:  true,
 		SilenceErrors: true,
 		PersistentPreRunE: func(cmd *cobra.Command, _ []string) error {

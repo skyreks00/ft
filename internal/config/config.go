@@ -14,6 +14,7 @@ import (
 	"io/fs"
 	"os"
 	"path/filepath"
+	"runtime/debug"
 	"strings"
 	"time"
 
@@ -48,6 +49,18 @@ const (
 	// and leave events (POST/DELETE /v2/events_users).
 	Scopes = "public projects profile"
 )
+
+// BuildVersion is Version, or for a `go install …@vX.Y.Z` build (no
+// ldflags) the module version recorded by Go.
+func BuildVersion() string {
+	if Version != "dev" {
+		return Version
+	}
+	if bi, ok := debug.ReadBuildInfo(); ok && bi.Main.Version != "" && bi.Main.Version != "(devel)" {
+		return strings.TrimPrefix(bi.Main.Version, "v")
+	}
+	return Version
+}
 
 // Config is the resolved configuration.
 type Config struct {
